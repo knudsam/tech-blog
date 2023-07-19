@@ -1,0 +1,17 @@
+<div class="posts">
+  {{#each posts}} <!-- Loop through each post in the "posts" array -->
+  <article class="card">
+    <div class="card-header flex-row justify-space-between">
+      <h2>
+        <a href="/post/{{id}}">{{title}}</a> <!-- Display the post title as a link -->
+      </h2>
+      <div>
+        Posted by {{User.username}} on {{format_date createdAt}} <!-- Display the username and creation date of the post -->
+      </div>
+    </div>
+    <div class="card-body">
+      {{body}} <!-- Display the body/content of the post -->
+    </div>
+  </article>
+  {{/each}}
+</div>
